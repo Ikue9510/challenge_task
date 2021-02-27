@@ -42,7 +42,7 @@ total_price = join_member_num * price
 
 if join_member_num >= 5
   puts "5名以上なので10%割引となります。"
-  total_price * 0.9
+  total_price = total_price * 0.9
 end
 
 puts "合計料金は#{total_price.floor}円になります。"
