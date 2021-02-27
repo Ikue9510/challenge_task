@@ -14,13 +14,14 @@ while true
   puts "1以上を入力して下さい。"
 end
 
-if plan_num == 1
+case plan_num
+when 1
   place = "沖縄旅行"
   price = 10000
-elsif plan_num == 2
+when 2
   place = "北海道旅行"
   price = 20000
-elsif plan_num == 3
+when 3
   place = "九州旅行"
   price = 15000
 end
@@ -37,11 +38,11 @@ end
 
 puts "#{join_member_num}名ですね。"
 
+total_price = join_member_num * price
+
 if join_member_num >= 5
   puts "5名以上なので10%割引となります。"
-  total_price = join_member_num * price * 0.9
-else
-  total_price = join_member_num * price
+  total_price * 0.9
 end
 
 puts "合計料金は#{total_price.floor}円になります。"
